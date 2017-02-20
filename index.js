@@ -1,4 +1,5 @@
 'use strict'; 
+var os = require('os')
 
 // https://github.com/diversario/node-ssdp/issues/34
 
@@ -9,8 +10,11 @@ var SsdpClient = require("node-ssdp").Client;
 
 var raumkernel = new Raumkernel();
 
-raumkernel.createLogger(5);
+raumkernel.createLogger(4);
 raumkernel.init();
+
+// var interfaces = os.networkInterfaces();
+// console.log(JSON.stringify(interfaces));
 
 /*
 raumkernel.managerDisposer.deviceManager.on("mediaRendererRaumfeldVirtualAdded", function (_usn, _device){

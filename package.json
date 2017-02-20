@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "winston": "^2.3.1",
-    "node-ssdp": "^3.1.0",
+    "node-ssdp": "^3.2.0",
     "upnp-device-client": "^1.0.2"
   },
   "author": "Christian Dürnberger",  
