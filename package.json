@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChriD/node-raumkernel.git"
+    "url": "git+https://github.com/ChriD/node-raumserver.git"
   },
   "keywords": [
     "raumserver",
@@ -16,14 +16,11 @@
     "raumfeld"
   ],
   "dependencies": {
-    "winston": "^2.3.1",
-    "winston-daily-rotate-file": "^1.4.4",
-    "node-ssdp": "^3.2.0",
-    "upnp-device-client": "^1.0.2"
+    "node-raumkernel": "^1.0.3"
   },
   "author": "Christian Dürnberger",  
   "bugs": {
-    "url": "https://github.com/ChriD/node-raumkernel/issues"
+    "url": "https://github.com/ChriD/node-raumserver/issues"
   },
-  "homepage": "https://github.com/ChriD/node-raumkernel#readme"
+  "homepage": "https://github.com/ChriD/node-raumserver#readme"
 }
