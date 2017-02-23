@@ -2,6 +2,4 @@
 
 var path = './lib/';
 
-module.exports = {
-    Raumkernel = require(path + "lib.raumkernel")
-}
+module.exports = require(path + "lib.raumkernel");
