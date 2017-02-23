@@ -16,4 +16,5 @@ module.exports = {
     DeviceManager : require(path + "lib.manager.deviceManager"),
     ZoneManager : require(path + "lib.manager.zoneManager"),
     ManagerDisposer : require(path + "lib.managerDisposer"),
+    PackageJSON : require("./package.json")
 }
