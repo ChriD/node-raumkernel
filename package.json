@@ -1,14 +1,14 @@
 {
   "name": "node-raumkernel",
-  "version": "1.0.3",
-  "description": "Library to control the Raumfeld multiroom system",
+  "version": "1.0.4",
+  "description": "Library to control the raumfeld multiroom system",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"    
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChriD/node-raumserver.git"
+    "url": "git+https://github.com/ChriD/node-raumkernel.git"
   },
   "keywords": [
     "raumserver",
@@ -16,11 +16,14 @@
     "raumfeld"
   ],
   "dependencies": {
-    "node-raumkernel": "^1.0.3"
+    "winston": "^2.3.1",
+    "winston-daily-rotate-file": "^1.4.4",
+    "node-ssdp": "^3.2.0",
+    "upnp-device-client": "^1.0.2"
   },
   "author": "Christian Dürnberger",  
   "bugs": {
-    "url": "https://github.com/ChriD/node-raumserver/issues"
+    "url": "https://github.com/ChriD/node-raumkernel/issues"
   },
-  "homepage": "https://github.com/ChriD/node-raumserver#readme"
+  "homepage": "https://github.com/ChriD/node-raumkernel#readme"
 }
