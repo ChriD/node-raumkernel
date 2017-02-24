@@ -4,7 +4,7 @@
   "description": "Library to control the raumfeld multiroom system",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"    
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,14 +16,15 @@
     "raumfeld"
   ],
   "dependencies": {
+    "node-ssdp": "^3.2.0",
+    "query-string": "^4.3.2",
+    "request": "^2.79.0",
+    "upnp-device-client": "^1.0.2",
     "winston": "^2.3.1",
     "winston-daily-rotate-file": "^1.4.4",
-    "node-ssdp": "^3.2.0",
-    "upnp-device-client": "^1.0.2",
-    "request": "^2.79.0",
     "xml2js": "^0.4.17"
   },
-  "author": "Christian Dürnberger",  
+  "author": "Christian Dürnberger",
   "bugs": {
     "url": "https://github.com/ChriD/node-raumkernel/issues"
   },
