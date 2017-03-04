@@ -22,7 +22,7 @@ raumkernel.init();
 Events
 -------------
 the node.raumkernel emits some events you can use to get information when the system changes states or a media renderer was found or is available for play. 
-Following events are available. You may click on each event to get a dteailed description
+Following events are available. You may click [here](https://github.com/ChriD/node-raumkernel/wiki/Events) to get detailed information about the event
 
  - systemHostFound(_host)
  - systemHostLost()
@@ -42,9 +42,17 @@ Following events are available. You may click on each event to get a dteailed de
  - rendererStateKeyValueChanged(_mediaRenderer, _key, _oldValue, _newValue) 
 
 
-Data holders
+Data & Methods
 -------------
+There is some interessting methods and data storages you can use. I will not describe all of them here you may look it up in the code. Howerver some of them should be mentioned as they are important. Please take a look  [here](https://github.com/ChriD/node-raumkernel/wiki/Data-&-Methods) for detailed descriptions.
+
+- raumkernel.deviceManager.getRaumfeldMediaServer();
+- raumkernel.deviceManager.getVirtualMediaRenderer(_UdnOrChildName);
+- raumkernel.zoneManager.connectRoomToZone(_roomUdn, _zoneUdn);
+- raumkernel.zoneManager.dropRoomFromZone(_roomUdn, _zoneUdn);
+- raumkernel.zoneManager.zoneConfiguration;
 
 
 Examples
 -------------
+
