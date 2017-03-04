@@ -46,11 +46,11 @@ Data & Methods
 -------------
 There is some interessting methods and data storages you can use. I will not describe all of them here you may look it up in the code. Howerver some of them should be mentioned as they are important. Please take a look  [here](https://github.com/ChriD/node-raumkernel/wiki/Data-&-Methods) for detailed descriptions.
 
-- raumkernel.deviceManager.getRaumfeldMediaServer();
-- raumkernel.deviceManager.getVirtualMediaRenderer(_UdnOrChildName);
-- raumkernel.zoneManager.connectRoomToZone(_roomUdn, _zoneUdn);
-- raumkernel.zoneManager.dropRoomFromZone(_roomUdn, _zoneUdn);
-- raumkernel.zoneManager.zoneConfiguration;
+- raumkernel.deviceManager.getRaumfeldMediaServer()
+- raumkernel.deviceManager.getVirtualMediaRenderer(_UdnOrChildName)
+- raumkernel.zoneManager.connectRoomToZone(_roomUdn, _zoneUdn)
+- raumkernel.zoneManager.dropRoomFromZone(_roomUdn, _zoneUdn)
+- raumkernel.zoneManager.zoneConfiguration
 
 
 Examples
