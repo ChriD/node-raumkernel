@@ -56,3 +56,41 @@ There is some interessting methods and data storages you can use. I will not des
 Examples
 -------------
 
+First of all you may lookup the requests sources in the[ node-raumserver](https://github.com/ChriD/node-raumserver)  which is using node.raumkernel
+You'll find all actions as requests and you can study the source code
+
+ Stop playing the zone where room "Kitchen" is in it.
+```
+var mediaRenderer = raumkernel.deviceManager.getVirtualMediaRenderer("Kitchen");
+mediaRenderer.stop().then(function(_data){
+		console.log("Stopped playing")
+	});
+```
+
+ Set Volume on whole zone with a given zoneUdn
+```
+var mediaRenderer = raumkernel.deviceManager.getVirtualMediaRenderer("uuid:30e3c8cd-1ce0-4842-89d0-63ea58858cd8");
+mediaRenderer.setVolume(25).then(function(_data){
+		console.log("Volume was set")
+	});
+```
+
+ Set Volume on a specific room
+```
+var mediaRenderer = raumkernel.deviceManager.getVirtualMediaRenderer("uuid:30e3c8cd-1ce0-4842-89d0-63ea58858cd8");
+mediaRenderer.setRoomVolume("uuid:3f68f253-df2a-4474-8640-fd45dd9ebf88", 35).then(function(_data){
+		console.log("Volume was set")
+	});
+```
+
+
+ Give info when volume changes on any renderer
+```
+raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue){
+		if(key=="Volume")
+			console.log("Volume on " + mediaRenderer.name() + " changed to " + newValue.toString());
+	})
+```
+
+
+
