@@ -49,7 +49,7 @@ There is some interessting methods and data storages you can use. I will not des
 - raumkernel.deviceManager.getRaumfeldMediaServer()
 - raumkernel.deviceManager.getVirtualMediaRenderer(_UdnOrChildName)
 - raumkernel.zoneManager.connectRoomToZone(_roomUdn, _zoneUdn)
-- raumkernel.zoneManager.dropRoomFromZone(_roomUdn, _zoneUdn)
+- raumkernel.zoneManager.dropRoomFromZone(_roomUdn)
 - raumkernel.zoneManager.zoneConfiguration
 
 
