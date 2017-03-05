@@ -88,7 +88,7 @@ mediaRenderer.setRoomVolume("uuid:3f68f253-df2a-4474-8640-fd45dd9ebf88", 35).the
 ```
 raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue){
 		if(key=="Volume")
-			console.log("Volume on " + mediaRenderer.name() + " changed to " + newValue.toString());
+			console.log("Volume on " + _mediaRenderer.name() + " changed to " + _newValue.toString());
 	})
 ```
 
