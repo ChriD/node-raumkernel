@@ -44,13 +44,13 @@ Following events are available. You may click [here](https://github.com/ChriD/no
 
 Data & Methods
 -------------
-There is some interessting methods and data storages you can use. I will not describe all of them here you may look it up in the code. Howerver some of them should be mentioned as they are important. Please take a look  [here](https://github.com/ChriD/node-raumkernel/wiki/Data-&-Methods) for detailed descriptions.
+There are some interessting methods and data storages you can use. I will not describe all of them here you may look it up in the code. Howerver some of them should be mentioned as they are important. Please take a look [here](https://github.com/ChriD/node-raumkernel/wiki/Data-&-Methods) for detailed descriptions.
 
-- raumkernel.deviceManager.getRaumfeldMediaServer()
-- raumkernel.deviceManager.getVirtualMediaRenderer(_UdnOrChildName)
-- raumkernel.zoneManager.connectRoomToZone(_roomUdn, _zoneUdn)
-- raumkernel.zoneManager.dropRoomFromZone(_roomUdn)
-- raumkernel.zoneManager.zoneConfiguration
+- raumkernel.managerDisposer.deviceManager.getRaumfeldMediaServer()
+- raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer(_UdnOrChildName)
+- raumkernel.managerDisposer.zoneManager.connectRoomToZone(_roomUdn, _zoneUdn)
+- raumkernel.managerDisposer.zoneManager.dropRoomFromZone(_roomUdn)
+- raumkernel.managerDisposer.zoneManager.zoneConfiguration
 
 
 Examples
@@ -61,7 +61,7 @@ You'll find all actions as requests and you can study the source code
 
  Stop playing the zone where room "Kitchen" is in it.
 ```
-var mediaRenderer = raumkernel.deviceManager.getVirtualMediaRenderer("Kitchen");
+var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Kitchen");
 mediaRenderer.stop().then(function(_data){
 		console.log("Stopped playing")
 	});
@@ -69,7 +69,7 @@ mediaRenderer.stop().then(function(_data){
 
  Set Volume on whole zone with a given zoneUdn
 ```
-var mediaRenderer = raumkernel.deviceManager.getVirtualMediaRenderer("uuid:30e3c8cd-1ce0-4842-89d0-63ea58858cd8");
+var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("uuid:30e3c8cd-1ce0-4842-89d0-63ea58858cd8");
 mediaRenderer.setVolume(25).then(function(_data){
 		console.log("Volume was set")
 	});
@@ -77,7 +77,7 @@ mediaRenderer.setVolume(25).then(function(_data){
 
  Set Volume on a specific room
 ```
-var mediaRenderer = raumkernel.deviceManager.getVirtualMediaRenderer("uuid:30e3c8cd-1ce0-4842-89d0-63ea58858cd8");
+var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("uuid:30e3c8cd-1ce0-4842-89d0-63ea58858cd8");
 mediaRenderer.setRoomVolume("uuid:3f68f253-df2a-4474-8640-fd45dd9ebf88", 35).then(function(_data){
 		console.log("Volume was set")
 	});
@@ -88,7 +88,7 @@ mediaRenderer.setRoomVolume("uuid:3f68f253-df2a-4474-8640-fd45dd9ebf88", 35).the
 ```
 raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue){
 		if(key=="Volume")
-			console.log("Volume on " + mediaRenderer.name() + " changed to " + newValue.toString());
+			console.log("Volume on " + _mediaRenderer.name() + " changed to " + _newValue.toString());
 	})
 ```
 
