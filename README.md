@@ -9,7 +9,7 @@ Installation
 -------------
 
 Please use with node version 7.x or above  
-For Version lower than 7.6.0 the --harmony-async-await parameter has to be used
+For Version lower than 7.6.0 the _--harmony-async-await_ parameter has to be used
 
 ```
 npm install node-raumkernel
