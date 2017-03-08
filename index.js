@@ -12,9 +12,10 @@ module.exports = {
     MediaRendererRaumfeldVirtual : require(path + "lib.device.upnp.mediaRenderer.raumfeldVirtual"),
     MediaServer : require(path + "lib.device.upnp.mediaServer"),
     MediaServerRaumfeld : require(path + "lib.device.upnp.mediaServer.raumfeld"),
-    ManagerBase : require(path + "lib.manager.base"),    
+    ManagerBase : require(path + "lib.manager.base"),
     DeviceManager : require(path + "lib.manager.deviceManager"),
     ZoneManager : require(path + "lib.manager.zoneManager"),
+    MediaListManager : require(path + "lib.manager.mediaListManager"),
     ManagerDisposer : require(path + "lib.managerDisposer"),
     PackageJSON : require("./package.json")
 }
