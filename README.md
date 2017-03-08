@@ -7,6 +7,10 @@ It has events where you can hook on and it allows you to send actions to the rau
 
 Installation
 -------------
+
+Please use with node version 7.x or above  
+For Version lower than 7.6.0 the _--harmony-async-await_ parameter has to be used
+
 ```
 npm install node-raumkernel
 ```
@@ -39,7 +43,7 @@ Following events are available. You may click [here](https://github.com/ChriD/no
  - mediaServerRaumfeldRemoved(_deviceUdn, _name)
  - zoneConfigurationChanged(_zoneConfiguration)
  - rendererStateChanged(_mediaRenderer, _rendererState)
- - rendererStateKeyValueChanged(_mediaRenderer, _key, _oldValue, _newValue) 
+ - rendererStateKeyValueChanged(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn) 
 
 
 Data & Methods
@@ -86,9 +90,18 @@ mediaRenderer.setRoomVolume("uuid:3f68f253-df2a-4474-8640-fd45dd9ebf88", 35).the
 
  Give info when volume changes on any renderer
 ```
-raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue){
+raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn){
 		if(key=="Volume")
 			console.log("Volume on " + _mediaRenderer.name() + " changed to " + _newValue.toString());
+	})
+```
+
+ Give info when volume changes on a specific room
+ The _mediaRenderer is the virtual renderer in case if _roomUdn is filled
+```
+raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn){
+		if(_roomUdn && key=="Volume")
+			console.log("Volume on room: " + _roomUdn + " changed to " + _newValue.toString());
 	})
 ```
 
