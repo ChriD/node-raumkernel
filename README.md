@@ -7,6 +7,10 @@ It has events where you can hook on and it allows you to send actions to the rau
 
 Installation
 -------------
+
+Please use with node version 7.x or above  
+For Version lower than 7.6.0 the --harmony-async-await parameter has to be used
+
 ```
 npm install node-raumkernel
 ```
