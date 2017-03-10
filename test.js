@@ -13,11 +13,13 @@ raumkernel.on("systemReady", function(_ready){
     
 raumkernel.on("mediaListReady", function(_listId, _data){
         raumkernel.logInfo("MediaList ready: " + _listId);
+        raumkernel.logWarning(JSON.stringify(_data));
     });
     
     
 raumkernel.on("mediaRendererPlaylistReady", function(_listId, _data){
         raumkernel.logInfo("mediaRendererPlaylistReady ready: " + _listId);
+        raumkernel.logWarning(JSON.stringify(_data));
     });
 
 raumkernel.on("mediaServerRaumfeldAdded", function(_udn, _mediaServer){
