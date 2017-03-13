@@ -13,13 +13,17 @@ raumkernel.on("systemReady", function(_ready){
     
 raumkernel.on("mediaListReady", function(_listId, _data){
         raumkernel.logInfo("MediaList ready: " + _listId);
-        raumkernel.logWarning(JSON.stringify(_data));
+        //raumkernel.logWarning(JSON.stringify(_data));
     });
+ 
+raumkernel.on("currentMediaItemDataChanged", function(_mediaRenderer, _data){
+        raumkernel.logInfo("MediaItem changed: " + JSON.stringify(_data));
+        //raumkernel.logWarning(JSON.stringify(_data));
+    }); 
     
-    
-raumkernel.on("mediaRendererPlaylistReady", function(_listId, _data){
-        raumkernel.logInfo("mediaRendererPlaylistReady ready: " + _listId);
-        raumkernel.logWarning(JSON.stringify(_data));
+raumkernel.on("mediaRendererPlaylistReady", function(_rendererUdn, _data){
+        raumkernel.logInfo("mediaRendererPlaylistReady ready: " + _rendererUdn);
+        //raumkernel.logWarning(JSON.stringify(_data));
     });
 
 raumkernel.on("mediaServerRaumfeldAdded", function(_udn, _mediaServer){
