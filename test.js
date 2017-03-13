@@ -16,7 +16,7 @@ raumkernel.on("mediaListReady", function(_listId, _data){
         //raumkernel.logWarning(JSON.stringify(_data));
     });
  
-raumkernel.on("currentMediaItemDataChanged", function(_mediaRenderer, _data){
+raumkernel.on("rendererMediaItemDataChanged", function(_mediaRenderer, _data){
         raumkernel.logInfo("MediaItem changed: " + JSON.stringify(_data));
         //raumkernel.logWarning(JSON.stringify(_data));
     }); 
