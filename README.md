@@ -44,6 +44,9 @@ Following events are available. You may click [here](https://github.com/ChriD/no
  - zoneConfigurationChanged(_zoneConfiguration)
  - rendererStateChanged(_mediaRenderer, _rendererState)
  - rendererStateKeyValueChanged(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn) 
+ - rendererMediaItemDataChanged(_mediaRenderer, _mediaItemData)
+ - mediaListReady(_listId, _mediaListData)
+ - mediaRendererPlaylistReady(_rendererUdn, _mediaListData)
 
 
 Data & Methods
@@ -55,6 +58,7 @@ There are some interessting methods and data storages you can use. I will not de
 - raumkernel.managerDisposer.zoneManager.connectRoomToZone(_roomUdn, _zoneUdn)
 - raumkernel.managerDisposer.zoneManager.dropRoomFromZone(_roomUdn)
 - raumkernel.managerDisposer.zoneManager.zoneConfiguration
+- raumkernel.managerDisposer.mediaListManager.getMediaList(_listId, _objectId, _useListCache = true, _emitReady = true)
 
 
 Examples
@@ -90,7 +94,7 @@ mediaRenderer.setRoomVolume("uuid:3f68f253-df2a-4474-8640-fd45dd9ebf88", 35).the
 
  Give info when volume changes on any renderer
 ```
-raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn){
+raumkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn){
 		if(key=="Volume")
 			console.log("Volume on " + _mediaRenderer.name() + " changed to " + _newValue.toString());
 	})
@@ -99,11 +103,31 @@ raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _ol
  Give info when volume changes on a specific room
  The _mediaRenderer is the virtual renderer in case if _roomUdn is filled
 ```
-raunkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn){
+raumkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn){
 		if(_roomUdn && key=="Volume")
 			console.log("Volume on room: " + _roomUdn + " changed to " + _newValue.toString());
 	})
 ```
 
+View the mediaItem information if it changes on a renderer (eg. if another track is choosen)
+```
+raumkernel.on("rendererMediaItemDataChanged", function(_mediaRenderer, _data){
+		console.log("MediaItem: " + JSON.stringify(_data));
+	})
+```
+
+
+Browse a list fron the content directory
+```
+var mediaServer = raunkernel.managerDisposer.deviceManager.getRaumfeldMediaServer();
+
+mediaServer.browse("0").then(function(_data){
+                console.log("Root Data: " + JSON.stringify(_data));
+            });
+	    
+mediaServer.browse("0/My Music").then(function(_data){
+                console.log("My Music data: " + JSON.stringify(_data));
+            });
+```
 
 
