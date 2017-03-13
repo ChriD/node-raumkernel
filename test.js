@@ -9,6 +9,18 @@ raumkernel.init();
 
 raumkernel.on("systemReady", function(_ready){
         raumkernel.logInfo("System ready: " + _ready);
+        
+        //
+        
+        raumkernel.logWarning("Try create playlist");
+        raumkernel.nativePlaylistController.createPlaylist("RAUMKERNELTEST").then(function(){
+            raumkernel.logWarning("Try rename playlist");
+            raumkernel.nativePlaylistController.renamePlaylist("RAUMKERNELTEST", "RAUMKERNELTEST X")
+        });
+        //raumkernel.nativePlaylistController.deletePlaylist("RAUMKERNELTEST (2)").catch(function(){});
+        //raumkernel.nativePlaylistController.deletePlaylist("RAUMKERNELTEST");
+        //raumkernel.nativePlaylistController.deletePlaylist("RAUMKERNELTEST X");
+        
     });
     
 raumkernel.on("mediaListReady", function(_listId, _data){
