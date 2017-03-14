@@ -1,7 +1,7 @@
 {
   "engines" : { "node" : ">=7.6.0" },
   "name": "node-raumkernel",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "description": "Library to control the raumfeld multiroom system",
   "main": "index.js",
   "scripts": {
