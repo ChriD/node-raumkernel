@@ -13,10 +13,26 @@ raumkernel.on("systemReady", function(_ready){
         //
         
         raumkernel.logWarning("Try create playlist");
-        raumkernel.nativePlaylistController.createPlaylist("RAUMKERNELTEST").then(function(){
-            raumkernel.logWarning("Try rename playlist");
-            raumkernel.nativePlaylistController.renamePlaylist("RAUMKERNELTEST", "RAUMKERNELTEST X")
-        });
+        //raumkernel.nativePlaylistController.createPlaylist("RAUMKERNELTEST").then(function(){
+            //raumkernel.logWarning("Try rename playlist");
+            //raumkernel.nativePlaylistController.renamePlaylist("RAUMKERNELTEST", "RAUMKERNELTEST X")
+            
+            raumkernel.logWarning("Add a container item to playlist");
+            //raumkernel.nativePlaylistController.addItemToPlaylist("RAUMKERNELTEST", "0/My Music/Artists/4%20Non%20Blondes/4%20Non%20Blondes+What%27s%20Up", 294967295, true);
+            
+            raumkernel.logWarning("Add one item to playlist");
+            //raumkernel.nativePlaylistController.addItemToPlaylist("RAUMKERNELTEST", "0/My Music/Artists/Dido/Dido+No%20Angel/c7e7ad4423927a75c5017b2640db6574");
+            
+            raumkernel.logWarning("Mobe item in playlist");
+            raumkernel.nativePlaylistController.moveItemInPlaylist("RAUMKERNELTEST", "0/Playlists/MyPlaylists/RAUMKERNELTEST/31990", 1);
+            
+            //raumkernel.logWarning("remove items from playlist");
+            raumkernel.nativePlaylistController.removeItemsFromPlaylist("RAUMKERNELTEST", 1, 1);
+            
+            
+            
+            
+        //});
         //raumkernel.nativePlaylistController.deletePlaylist("RAUMKERNELTEST (2)").catch(function(){});
         //raumkernel.nativePlaylistController.deletePlaylist("RAUMKERNELTEST");
         //raumkernel.nativePlaylistController.deletePlaylist("RAUMKERNELTEST X");
