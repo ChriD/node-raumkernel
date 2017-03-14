@@ -130,4 +130,18 @@ mediaServer.browse("0/My Music").then(function(_data){
             });
 ```
 
+Some actions for creating and modifying native playlists 
 
+```
+// Add a container item to playlist (That means an item which direct childs are tracks)
+raumkernel.nativePlaylistController.addItemToPlaylist("RAUMKERNELTEST", "0/My Music/Artists/4%20Non%20Blondes/4%20Non%20Blondes+What%27s%20Up", 294967295, true);
+            
+// Add one item to playlist. Here the mediaItemid is a track
+raumkernel.nativePlaylistController.addItemToPlaylist("RAUMKERNELTEST", "0/My Music/Artists/Dido/Dido+No%20Angel/c7e7ad4423927a75c5017b2640db6574");
+            
+// Move an item in playlist to position 2 (index starts with 0)
+raumkernel.nativePlaylistController.moveItemInPlaylist("RAUMKERNELTEST", "0/Playlists/MyPlaylists/RAUMKERNELTEST/31990", 1);
+            
+// Remove first and second item from playlist
+raumkernel.nativePlaylistController.removeItemsFromPlaylist("RAUMKERNELTEST", 0, 1);
+```
