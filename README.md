@@ -64,10 +64,19 @@ There are some interessting methods and data storages you can use. I will not de
 Examples
 -------------
 
-First of all you may lookup the requests sources in the[ node-raumserver](https://github.com/ChriD/node-raumserver)  which is using node.raumkernel
-You'll find all actions as requests and you can study the source code
+#### First 
+There are sample apps in the package like the "sample_contentBrowser.js".  
+Start it with node and see the magic  
 
- Stop playing the zone where room "Kitchen" is in it.
+#### Second 
+You may lookup the requests sources in the[ node-raumserver](https://github.com/ChriD/node-raumserver)  which is using node-raumkernel
+You'll find all actions as requests and you can study the source code.
+  
+#### Third 
+You may study following minimalistc examples
+  
+
+Stop playing the zone where room "Kitchen" is in it.
 ```
 var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Kitchen");
 mediaRenderer.stop().then(function(_data){
