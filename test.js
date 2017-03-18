@@ -24,10 +24,10 @@ raumkernel.on("systemReady", function(_ready){
             //raumkernel.nativePlaylistController.addItemToPlaylist("RAUMKERNELTEST", "0/My Music/Artists/Dido/Dido+No%20Angel/c7e7ad4423927a75c5017b2640db6574");
             
             raumkernel.logWarning("Mobe item in playlist");
-            raumkernel.nativePlaylistController.moveItemInPlaylist("RAUMKERNELTEST", "0/Playlists/MyPlaylists/RAUMKERNELTEST/31990", 1);
+            //raumkernel.nativePlaylistController.moveItemInPlaylist("RAUMKERNELTEST", "0/Playlists/MyPlaylists/RAUMKERNELTEST/31990", 1);
             
             //raumkernel.logWarning("remove items from playlist");
-            raumkernel.nativePlaylistController.removeItemsFromPlaylist("RAUMKERNELTEST", 1, 1);
+            //raumkernel.nativePlaylistController.removeItemsFromPlaylist("RAUMKERNELTEST", 1, 1);
             
             
             
