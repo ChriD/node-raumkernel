@@ -1,5 +1,7 @@
 {
-  "engines" : { "node" : ">=7.6.0" },
+  "engines": {
+    "node": ">=7.6.0"
+  },
   "name": "node-raumkernel",
   "version": "1.0.15",
   "description": "Library to control the raumfeld multiroom system",
@@ -17,6 +19,7 @@
     "raumfeld"
   ],
   "dependencies": {
+    "bonjour": "^3.5.0",
     "node-ssdp": "^3.2.0",
     "query-string": "^4.3.2",
     "request": "^2.79.0",
