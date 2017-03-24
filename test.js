@@ -30,10 +30,38 @@ raumkernel.on("systemReady", function(_ready){
             //raumkernel.nativePlaylistController.removeItemsFromPlaylist("RAUMKERNELTEST", 1, 1);
             
             var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
-            mediaRenderer.loadPlaylist("Rock", 2).catch(function(_data){
+            //mediaRenderer.loadPlaylist("Rock", 2).catch(function(_data){
+            //    console.log(_data.toString());
+            //});
+            //mediaRenderer.loadUri("http://mp3channels.webradio.rockantenne.de/heavy-metal").catch(function(_data){
+            //    console.log(_data.toString());
+            //});
+            
+            /*
+            if (source == "recentartists")
+                source = "0/Playlists/Shuffles/RecentArtists";
+            if (source == "topartists")
+                source = "0/Playlists/Shuffles/TopArtists";
+            if (source == "all")
+                source = "0/Playlists/Shuffles/All";
+            // on following types we can add selections
+            if (source == "genre")
+                source = "0/Playlists/Shuffles/Genre";
+            if (source == "genre")
+                source = "0/Playlists/Shuffles/Artists";
+
+            
+            object.container.playlistContainer.shuffle 0/Playlists/Shuffles/RecentArtists
+            object.container.playlistContainer.shuffle 0/Playlists/Shuffles/TopArtists
+            object.container.playlistContainer.shuffle 0/Playlists/Shuffles/All
+            object.container.playlistContainer.shuffle.search 0/Playlists/Shuffles/Genre
+            object.container.playlistContainer.shuffle.search 0/Playlists/Shuffles/Artists
+            */
+
+
+            mediaRenderer.loadShuffle("0/Playlists/Shuffles/All", "").catch(function(_data){
                 console.log(_data.toString());
             });
-            
             
             
         //});
