@@ -30,9 +30,9 @@ raumkernel.on("systemReady", function(_ready){
             //raumkernel.nativePlaylistController.removeItemsFromPlaylist("RAUMKERNELTEST", 1, 1);
             
             var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
-            //mediaRenderer.loadPlaylist("Rock", 2).catch(function(_data){
-            //    console.log(_data.toString());
-            //});
+            mediaRenderer.loadPlaylist("Rock", 2).catch(function(_data){
+                console.log(_data.toString());
+            });
             //mediaRenderer.loadUri("http://mp3channels.webradio.rockantenne.de/heavy-metal").catch(function(_data){
             //    console.log(_data.toString());
             //});
@@ -59,9 +59,23 @@ raumkernel.on("systemReady", function(_ready){
             */
 
 
-            mediaRenderer.loadShuffle("0/Playlists/Shuffles/All", "").catch(function(_data){
-                console.log(_data.toString());
-            });
+            //mediaRenderer.loadShuffle("0/Playlists/Shuffles/All", "").catch(function(_data){
+            //    console.log(_data.toString());
+            //});
+
+            setTimeout(function(){
+
+                raumkernel.logWarning("Trying to add a media item to a zone playlist");
+                raumkernel.zonePlaylistController.addItemToPlaylist(mediaRenderer.udn(), "0/My Music/Artists/Dido/Dido+No%20Angel/c7e7ad4423927a75c5017b2640db6574").then(function(_data){
+                    raumkernel.logWarning(_data);
+                }).catch(function(_data){
+                    raumkernel.logWarning(_data);
+                });
+
+
+            }, 5000);
+
+            
             
             
         //});
