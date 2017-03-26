@@ -79,7 +79,7 @@ raumkernel.on("systemReady", function(_ready){
             
 
 
-            setTimeout(function(){
+            /*setTimeout(function(){
 
                 raumkernel.logWarning("Trying to move a media item in a zone playlist");
                 raumkernel.zonePlaylistController.moveItemInPlaylist(mediaRenderer.udn(), "0/Zones/uuid%3A00000000-5416-48eb-0000-0000541648eb/33761", 1).then(function(_data){
@@ -89,7 +89,7 @@ raumkernel.on("systemReady", function(_ready){
                 });
 
 
-            }, 15000);
+            }, 15000);*/
 
 
             /*
