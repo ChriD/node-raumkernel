@@ -2,12 +2,13 @@ Welcome to node-raumkernel
 ===================
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ChriD/)
 [![npm:?](https://img.shields.io/npm/v/node-raumkernel.svg?style=flat-square)](https://www.npmjs.com/packages/node-raumkernel)
-[![dependencies:?](https://img.shields.io/npm/dm/node-raumkernel.svg?style=flat-square)](https://www.npmjs.com/packages/node-raumkernel)
+[![dependencies:?](https://img.shields.io/npm/dm/node-raumkernel.svg?style=flat-square)](https://www.npmjs.com/packages/node-raumkernel)  
 
-[![NPM](https://nodei.co/npm/node-raumkernel.png?downloads=true&downloadRank=true)](https://nodei.co/npm/node-raumkernel/)
+[![NPM](https://nodei.co/npm/node-raumkernel.png?downloads=true&downloadRank=true)](https://nodei.co/npm/node-raumkernel/)  
 
 node-raumkernel is a nodeJs lib to control the raumfeld multiroom system with.
-It has events where you can hook on and it allows you to send actions to the raumfeld system like 'play', 'pause', aso..
+It has events where you can hook on and it allows you to send actions to the raumfeld system like 'play', 'pause', aso..  
+You can even browse the content directory or modify a zone playlist.  
 
 
 Installation
