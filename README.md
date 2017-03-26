@@ -1,5 +1,6 @@
 Welcome to node-raumkernel
 ===================
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ChriD/)
 [![npm:?](https://img.shields.io/npm/v/node-raumkernel.svg?style=flat-square)](https://www.npmjs.com/packages/node-raumkernel)
 [![dependencies:?](https://img.shields.io/npm/dm/node-raumkernel.svg?style=flat-square)](https://www.npmjs.com/packages/node-raumkernel)
 
