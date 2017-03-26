@@ -1,8 +1,14 @@
 Welcome to node-raumkernel
 ===================
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ChriD/)
+[![npm:?](https://img.shields.io/npm/v/node-raumkernel.svg?style=flat-square)](https://www.npmjs.com/packages/node-raumkernel)
+[![dependencies:?](https://img.shields.io/npm/dm/node-raumkernel.svg?style=flat-square)](https://www.npmjs.com/packages/node-raumkernel)  
+
+[![NPM](https://nodei.co/npm/node-raumkernel.png?downloads=true&downloadRank=true)](https://nodei.co/npm/node-raumkernel/)  
 
 node-raumkernel is a nodeJs lib to control the raumfeld multiroom system with.
-It has events where you can hook on and it allows you to send actions to the raumfeld system like 'play', 'pause', aso..
+It has events where you can hook on and it allows you to send actions to the raumfeld system like 'play', 'pause', aso..  
+You can even browse the content directory or modify a zone playlist.  
 
 
 Installation
@@ -153,4 +159,20 @@ raumkernel.nativePlaylistController.moveItemInPlaylist("RAUMKERNELTEST", "0/Play
             
 // Remove first and second item from playlist
 raumkernel.nativePlaylistController.removeItemsFromPlaylist("RAUMKERNELTEST", 0, 1);
+```
+
+Some actions for creating and modifying zone playlists  (title lists)
+
+```
+// Add a container item to playlist (That means an item which direct childs are tracks)
+raumkernel.zonePlaylistController.addItemToPlaylist(zoneRendererUdn, "0/My Music/Artists/4%20Non%20Blondes/4%20Non%20Blondes+What%27s%20Up", 294967295, true);
+            
+// Add one item to playlist. Here the mediaItemid is a track
+raumkernel.zonePlaylistController.addItemToPlaylist(zoneRendererUdn, "0/My Music/Artists/Dido/Dido+No%20Angel/c7e7ad4423927a75c5017b2640db6574");
+            
+// Move an item in playlist to position 2 (index starts with 0)
+raumkernel.zonePlaylistController.moveItemInPlaylist(zoneRendererUdn, "0/Zones/uuid%3A00000000-5416-48eb-0000-0000541648eb/33761", 1);
+            
+// Remove first and second item from playlist
+raumkernel.zonePlaylistController.removeItemsFromPlaylist(zoneRendererUdn, 0, 1);
 ```
