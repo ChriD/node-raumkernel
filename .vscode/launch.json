@@ -18,6 +18,12 @@
         },
         {
             "type": "node",
+            "request": "launch",
+            "name": "Content Browse test starten",
+            "program": "${workspaceRoot}\\sample_contentBrowser.js"
+        },
+        {
+            "type": "node",
             "request": "attach",
             "name": "An den Prozess anfügen",
             "address": "localhost",
