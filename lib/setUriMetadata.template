@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DIDL-Lite xmlns="urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dlna="urn:schemas-dlna-org:metadata-1-0/" xmlns:raumfeld="urn:schemas-raumfeld-com:meta-data/raumfeld" xmlns:upnp="urn:schemas-upnp-org:metadata-1-0/upnp/" lang="en">
+    <item parentID="0" id="0/External" restricted="1">
+        <raumfeld:name>Station</raumfeld:name>
+        <upnp:class>object.item.audioItem.audioBroadcast.radio</upnp:class>
+        <raumfeld:section>External</raumfeld:section>
+        <raumfeld:durability>120</raumfeld:durability>
+        <dc:title></dc:title>
+        <upnp:signalStrength>99</upnp:signalStrength>
+        <upnp:albumArtURI dlna:profileID="JPEG_TN"></upnp:albumArtURI>
+        <raumfeld:ebrowse></raumfeld:ebrowse>
+        <res bitrate="000" protocolInfo="http-get:*:audio/x-mpegurl:*"></res>
+    </item>
+</DIDL-Lite>

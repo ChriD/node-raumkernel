@@ -5,7 +5,7 @@ setWelcomeScreen();
 
 var idStack = [];
 var raumkernel = new Raumkernel();
-raumkernel.createLogger(0);
+raumkernel.createLogger(1, "logs");
 raumkernel.init();
 
 

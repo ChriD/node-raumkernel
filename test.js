@@ -33,9 +33,9 @@ raumkernel.on("systemReady", function(_ready){
             //mediaRenderer.loadPlaylist("Rock", 2).catch(function(_data){
             //    console.log(_data.toString());
             //});
-            //mediaRenderer.loadUri("http://mp3channels.webradio.rockantenne.de/heavy-metal").catch(function(_data){
-            //    console.log(_data.toString());
-            //});
+            mediaRenderer.loadUri("http://mp3channels.webradio.rockantenne.de/heavy-metal").catch(function(_data){
+                console.log(_data.toString());
+            });
             
             /*
             if (source == "recentartists")
