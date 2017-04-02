@@ -51,7 +51,8 @@ Following events are available. You may click [here](https://github.com/ChriD/no
  - rendererStateChanged(_mediaRenderer, _rendererState)
  - rendererStateKeyValueChanged(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn) 
  - rendererMediaItemDataChanged(_mediaRenderer, _mediaItemData)
- - mediaListReady(_listId, _mediaListData)
+ - mediaListDataReady(_listId, _mediaListData)
+ - mediaListDataPackageReady(_id, _mediaListDataPkg, _pkgIdx, _pgkIdxEnd, _pkgDataCount)
  - mediaRendererPlaylistReady(_rendererUdn, _mediaListData)
 
 
