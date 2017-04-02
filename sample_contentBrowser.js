@@ -4,16 +4,35 @@ var Raumkernel = require('./lib/lib.raumkernel');
 setWelcomeScreen();
 
 var idStack = [];
+var tp0;
+var tpDuration;
 var raumkernel = new Raumkernel();
 raumkernel.createLogger(1, "logs");
 raumkernel.init();
+
+
+function perfMeassure(_start) {
+    if ( !_start ) return process.hrtime();
+    var end = process.hrtime(_start);
+    return Math.round((end[0]*1000) + (end[1]/1000000));
+}
+
+
+// set up a callback to show the "reading state" of a media list that is beeing read
+// of course this will be called on any browse wherer the "emit" parameter is active
+raumkernel.on("mediaListDataPackageReady", function(_id, _mediaListDataPkg, _pkgIdx, _pgkIdxEnd, _pkgDataCount)
+{ 
+    console.log('\033[2J');
+    console.log("--------------------------------");
+    console.log("Reading Data: " + (_pgkIdxEnd+1).toString());
+    console.log("--------------------------------");
+});
 
 
 // browse to root when system is ready
 raumkernel.on("systemReady", function(_ready){
     browse("0");
 });
-
 
 
 function browse(_id, _backwards = false, _addToStack = true)
@@ -24,8 +43,11 @@ function browse(_id, _backwards = false, _addToStack = true)
         idStack.pop();
     else if(_addToStack)
         idStack.push(_id); 
+    
+    tp0 = perfMeassure();
         
-    raumkernel.managerDisposer.mediaListManager.getMediaList(_id, _id, true, false).then(function(_data){
+    raumkernel.managerDisposer.mediaListManager.getMediaList(_id, _id, true, true, 25).then(function(_data){
+        tpDuration = perfMeassure(tp0);
         viewBrowseResult(_id, _data);
     }).catch(function(_data){
         viewError(_data);
@@ -36,7 +58,7 @@ function browse(_id, _backwards = false, _addToStack = true)
 function viewBrowseResult(_id, _data)
 {
     console.log('\033[2J');
-    console.log(JSON.stringify(idStack) + " --> " + _id);
+    console.log(JSON.stringify(idStack) + " --> " + _id);   
     console.log("--------------------------------");
     
     if(_data && _data.length)
@@ -50,6 +72,8 @@ function viewBrowseResult(_id, _data)
     {
         console.log("# No data available");
     }
+    console.log("--------------------------------");
+    console.log("Loading time: " +  (tpDuration) + " ms");
     console.log("--------------------------------");
     console.log("x BROWSE BACK");
     console.log("--------------------------------");
