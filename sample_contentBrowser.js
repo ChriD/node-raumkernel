@@ -46,7 +46,7 @@ function browse(_id, _backwards = false, _addToStack = true)
     
     tp0 = perfMeassure();
         
-    raumkernel.managerDisposer.mediaListManager.getMediaList(_id, _id, true, true, 25).then(function(_data){
+    raumkernel.managerDisposer.mediaListManager.getMediaList(_id, _id, "", true, true, 25).then(function(_data){
         tpDuration = perfMeassure(tp0);
         viewBrowseResult(_id, _data);
     }).catch(function(_data){
@@ -81,7 +81,7 @@ function viewBrowseResult(_id, _data)
     var readLine1 = Readline.createInterface({input: process.stdin, output: process.stdout});
     readLine1.question('Choose ID: ', (_input) => {
         readLine1.close();
-        if(_data[_input])
+        if(_data && _data[_input])
         {
             browse(_data[_input].id);
         }

@@ -143,6 +143,12 @@ raumkernel.on("mediaServerRaumfeldAdded", function(_udn, _mediaServer){
                 raumkernel.logWarning(JSON.stringify(_data));
             })
         */
+
+            raumkernel.managerDisposer.mediaListManager.searchMediaList("DUMMYLISTID", "0/RadioTime/Search", "OE3").then(function(_data){
+                raumkernel.logWarning(JSON.stringify(_data));
+            })
+
+        
         
         /*
         raumkernel.managerDisposer.mediaListManager.getMediaList("0", 0).then(function(_data){
