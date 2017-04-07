@@ -58,7 +58,7 @@ Following events are available. You may click [here](https://github.com/ChriD/no
 
 Data & Methods
 -------------
-There are some interessting methods and data storages you can use. I will not describe all of them here you may look it up in the code. Howerver some of them should be mentioned as they are important. Please take a look [here](https://github.com/ChriD/node-raumkernel/wiki/Data-&-Methods) for detailed descriptions.
+There are some interessting methods and data storages you can use. I will not describe all of them here you may look it up in the code. However some of them should be mentioned as they are important. Please take a look [here](https://github.com/ChriD/node-raumkernel/wiki/Data-&-Methods) for detailed descriptions.
 
 - raumkernel.managerDisposer.deviceManager.getRaumfeldMediaServer()
 - raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer(_UdnOrChildName)
