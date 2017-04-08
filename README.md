@@ -10,6 +10,9 @@ node-raumkernel is a nodeJs lib to control the raumfeld multiroom system with.
 It has events where you can hook on and it allows you to send actions to the raumfeld system like 'play', 'pause', aso..  
 You can even browse the content directory or modify a zone playlist.  
 
+Changelog
+-------------
+Changelog can be found [here](https://github.com/ChriD/node-raumkernel/wiki/Changelog)  
 
 Installation
 -------------
