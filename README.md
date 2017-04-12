@@ -12,7 +12,7 @@ You can even browse the content directory or modify a zone playlist.
 
 Changelog
 -------------
-Changelog can be found [here](https://github.com/ChriD/node-raumkernel/wiki/Changelog)  
+Changelog can be found [here](https://github.com/ChriD/node-raumkernel/releases)  
 
 Installation
 -------------
