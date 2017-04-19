@@ -65,7 +65,7 @@ function viewBrowseResult(_id, _data)
     {
         for(var i=0; i<_data.length; i++)
         {
-            console.log(i.toString() + " - " + _data[i].title);
+            console.log(i.toString() + " - " + _data[i].title + " (" + _data[i].id + ")");
         }
     }
     else

@@ -82,6 +82,8 @@ raumkernel.on("systemReady", function(_ready){
                 var rendererUdns = mediaRenderer.getRoomRendererUDNs();
                 console.log(JSON.stringify(rendererUdns));
 
+                mediaRenderer.loadLineIn("Schlafzimmer");
+
 
             }, 5000);
             
