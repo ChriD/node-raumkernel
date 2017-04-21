@@ -180,3 +180,13 @@ raumkernel.zonePlaylistController.moveItemInPlaylist(zoneRendererUdn, "0/Zones/u
 // Remove first and second item from playlist
 raumkernel.zonePlaylistController.removeItemsFromPlaylist(zoneRendererUdn, 0, 1);
 ```
+
+
+Assign the first station button of a renderer to a containerId which should be played when the button is hit
+
+```
+var mediaServer = raunkernel.managerDisposer.deviceManager.getRaumfeldMediaServer();
+mediaServer.assignStationButton("uuid:30e3c8cd-1ce0-4842-89d0-63ea58858cd8", 1, "0/My Music/Artists/4%20Non%20Blondes/4%20Non%20Blondes+What%27s%20Up").then(function(_data){
+                ...
+            });
+```
