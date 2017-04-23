@@ -78,14 +78,35 @@ raumkernel.on("systemReady", function(_ready){
                 });
                 */
 
-                var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
-                var rendererUdns = mediaRenderer.getRoomRendererUDNs();
-                console.log(JSON.stringify(rendererUdns));
+                var mediaRendererK = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
+                var mediaRendererB = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Bad")
+                //var rendererUdns = mediaRenderer.getRoomRendererUDNs();
+                //console.log(JSON.stringify(rendererUdns));
+                //mediaRenderer.loadLineIn("Schlafzimmer");
 
-                mediaRenderer.loadLineIn("Schlafzimmer");
+                mediaRendererB.pause(true).then(function(_data){
+                    raumkernel.logWarning("Paused", _data);
+
+                    mediaRendererB.play(true).then(function(_data){
+                        raumkernel.logWarning("Playing", _data);
+
+                        mediaRendererB.setPlayMode("REPEAT_ALL", true).then(function(_data){
+                            raumkernel.logWarning("REPEAT_ALL", _data);
+                        }).catch(function(_data){
+                            raumkernel.logError("Catched", _data);
+                        });
+
+                    }).catch(function(_data){
+                        raumkernel.logError("Catched", _data);
+                    });
+
+                }).catch(function(_data){
+                    raumkernel.logError("Catched", _data);
+                });
+               
 
 
-            }, 5000);
+            }, 3000);
             
             
 
