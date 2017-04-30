@@ -3,7 +3,7 @@ var Raumkernel = require('./lib/lib.raumkernel');
 
 var raumkernel = new Raumkernel();
 
-//raumkernel.settings.raumfeldHost = "10.0.0.203"
+raumkernel.settings.raumfeldHost = "10.0.0.203"
 
 raumkernel.createLogger(2);
 raumkernel.init();
@@ -80,7 +80,7 @@ raumkernel.on("systemReady", function(_ready){
                 });
                 */
 
-                /*
+                
 
                 var mediaRendererK = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
                 var mediaRendererB = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Bad")
@@ -88,6 +88,29 @@ raumkernel.on("systemReady", function(_ready){
                 //console.log(JSON.stringify(rendererUdns));
                 //mediaRenderer.loadLineIn("Schlafzimmer");
 
+                raumkernel.logInfo("SetMute true"); 
+                mediaRendererK.setMute(true, true).then(function(_data){
+                    raumkernel.logInfo("SetVolume 33"); 
+                    mediaRendererK.setVolume(33, true).then(function(_data){
+                        raumkernel.logInfo("SetMute false"); 
+                        mediaRendererK.setMute(false, true).then(function(_data){
+                             raumkernel.logInfo("SetVolume 22"); 
+                             mediaRendererK.setVolume(22, true).then(function(_data){   
+                                raumkernel.logWarning("Done!!!", _data);                                                 
+                            }).catch(function(_data){
+                                raumkernel.logError("Catched", _data);
+                            });                                                    
+                        }).catch(function(_data){
+                            raumkernel.logError("Catched", _data);
+                        });
+                    }).catch(function(_data){
+                        raumkernel.logError("Catched", _data);
+                    });
+                }).catch(function(_data){
+                    raumkernel.logError("Catched", _data);
+                });
+
+                /*
                 mediaRendererB.pause(true).then(function(_data){
                     raumkernel.logWarning("Paused", _data);
 
@@ -107,8 +130,9 @@ raumkernel.on("systemReady", function(_ready){
                 }).catch(function(_data){
                     raumkernel.logError("Catched", _data);
                 });
+                */
                
-               */
+               
 
 
             }, 3000);
