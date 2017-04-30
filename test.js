@@ -3,6 +3,8 @@ var Raumkernel = require('./lib/lib.raumkernel');
 
 var raumkernel = new Raumkernel();
 
+//raumkernel.settings.raumfeldHost = "10.0.0.203"
+
 raumkernel.createLogger(2);
 raumkernel.init();
 
@@ -78,6 +80,8 @@ raumkernel.on("systemReady", function(_ready){
                 });
                 */
 
+                /*
+
                 var mediaRendererK = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
                 var mediaRendererB = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Bad")
                 //var rendererUdns = mediaRenderer.getRoomRendererUDNs();
@@ -104,6 +108,7 @@ raumkernel.on("systemReady", function(_ready){
                     raumkernel.logError("Catched", _data);
                 });
                
+               */
 
 
             }, 3000);
