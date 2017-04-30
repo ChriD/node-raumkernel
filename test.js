@@ -88,14 +88,70 @@ raumkernel.on("systemReady", function(_ready){
                 //console.log(JSON.stringify(rendererUdns));
                 //mediaRenderer.loadLineIn("Schlafzimmer");
 
+                var confirm = true;
+
+                /*
+
+                mediaRendererK.loadPlaylist("Rock", 2, confirm).then(function(_data){
+                    raumkernel.logWarning("Playlist Rock loaded"); 
+                    mediaRendererK.loadShuffle("0/Playlists/Shuffles/All", "", false, confirm).then(function(_data){
+                        raumkernel.logWarning("Schuffle All loaded"); 
+                        mediaRendererK.loadUri("http://mp3channels.webradio.rockantenne.de/heavy-metal", false, confirm).then(function(_data){
+                            raumkernel.logWarning("Rockantenne loaded"); 
+                            mediaRendererK.loadLineIn("Schlafzimmer", confirm).then(function(_data){
+                                raumkernel.logWarning("Line In loaded"); 
+                                mediaRendererK.loadPlaylist("Rock", 2, confirm).then(function(_data){
+                                    raumkernel.logWarning("Done!!!", _data); 
+                                }).catch(function(_data){
+                                    raumkernel.logError("Catched", _data);
+                                }); 
+                            }).catch(function(_data){
+                                raumkernel.logError("Catched", _data);
+                            });     
+                         }).catch(function(_data){
+                            raumkernel.logError("Catched", _data);
+                        });
+                    }).catch(function(_data){
+                        raumkernel.logError("Catched", _data);
+                    });
+                }).catch(function(_data){
+                    raumkernel.logError("Catched", _data);
+                });
+
+                */
+                    
+                    /*mediaRenderer.loadUri("http://mp3channels.webradio.rockantenne.de/heavy-metal").catch(function(_data){
+                        console.log(_data.toString());
+                    });*/
+
+                 //mediaRenderer.loadShuffle("0/Playlists/Shuffles/All", "").catch(function(_data){
+                    //    console.log(_data.toString());
+                    //});
+
+
+                /*
+                mediaRendererK.next(confirm).then(function(_data){   
+                    mediaRendererK.prev(confirm).then(function(_data){    
+                        raumkernel.logWarning("Done!!!", _data); 
+                    }).catch(function(_data){
+                        raumkernel.logError("Catched", _data);
+                    });                 
+                }).catch(function(_data){
+                    raumkernel.logError("Catched", _data);
+                });
+                */
+
+
+                /*
                 raumkernel.logInfo("SetMute true"); 
-                mediaRendererK.setMute(true, true).then(function(_data){
+                mediaRendererK.setMute(true, confirm).then(function(_data){
                     raumkernel.logInfo("SetVolume 33"); 
-                    mediaRendererK.setVolume(33, true).then(function(_data){
+                    mediaRendererK.setVolume(33, confirm).then(function(_data){
+                    //mediaRendererK.setMute(true, confirm).then(function(_data){
                         raumkernel.logInfo("SetMute false"); 
-                        mediaRendererK.setMute(false, true).then(function(_data){
+                        mediaRendererK.setMute(false, confirm).then(function(_data){
                              raumkernel.logInfo("SetVolume 22"); 
-                             mediaRendererK.setVolume(22, true).then(function(_data){   
+                             mediaRendererK.setVolume(22, confirm).then(function(_data){   
                                 raumkernel.logWarning("Done!!!", _data);                                                 
                             }).catch(function(_data){
                                 raumkernel.logError("Catched", _data);
@@ -109,6 +165,7 @@ raumkernel.on("systemReady", function(_ready){
                 }).catch(function(_data){
                     raumkernel.logError("Catched", _data);
                 });
+                */
 
                 /*
                 mediaRendererB.pause(true).then(function(_data){
