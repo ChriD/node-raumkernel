@@ -9,6 +9,14 @@ raumkernel.createLogger(2);
 raumkernel.init();
 
 
+raumkernel.on("zoneCreated",                          function(_zoneUDN)               { raumkernel.logWarning("Zone created: " + _zoneUDN); });
+raumkernel.on("zoneRemoved",                          function(_zoneUDN)               { raumkernel.logError("Zone removed: " + _zoneUDN); });
+raumkernel.on("roomAddedToZone",                      function(_zoneUDN, _roomUDN)     { raumkernel.logWarning("Room: " + _roomUDN + " added to zone: " + _zoneUDN); });
+raumkernel.on("roomRemovedFromZone",                  function(_zoneUDN, _roomUDN)     { raumkernel.logError("Room: " + _roomUDN + " removed from zone: " + _zoneUDN); });
+
+
+
+
 raumkernel.on("systemReady", function(_ready){
         raumkernel.logInfo("System ready: " + _ready);
         
@@ -239,12 +247,12 @@ raumkernel.on("mediaListReady", function(_listId, _data){
     });
  
 raumkernel.on("rendererMediaItemDataChanged", function(_mediaRenderer, _data){
-        raumkernel.logInfo("MediaItem changed: " + JSON.stringify(_data));
+        //raumkernel.logInfo("MediaItem changed: " + JSON.stringify(_data));
         //raumkernel.logWarning(JSON.stringify(_data));
     }); 
     
 raumkernel.on("mediaRendererPlaylistReady", function(_rendererUdn, _data){
-        raumkernel.logInfo("mediaRendererPlaylistReady ready: " + _rendererUdn);
+        //raumkernel.logInfo("mediaRendererPlaylistReady ready: " + _rendererUdn);
         //raumkernel.logWarning(JSON.stringify(_data));
     });
 
@@ -260,11 +268,11 @@ raumkernel.on("mediaServerRaumfeldAdded", function(_udn, _mediaServer){
                 raumkernel.logWarning(JSON.stringify(_data));
             })
         */
-
+/*
             raumkernel.managerDisposer.mediaListManager.searchMediaList("DUMMYLISTID", "0/RadioTime/Search", "OE3").then(function(_data){
                 raumkernel.logWarning(JSON.stringify(_data));
             })
-
+*/
         
         
         /*
