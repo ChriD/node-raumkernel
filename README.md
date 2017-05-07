@@ -56,7 +56,11 @@ Following events are available. You may click [here](https://github.com/ChriD/no
  - rendererMediaItemDataChanged(_mediaRenderer, _mediaItemData)
  - mediaListDataReady(_listId, _mediaListData)
  - mediaListDataPackageReady(_id, _mediaListDataPkg, _pkgIdx, _pgkIdxEnd, _pkgDataCount)
- - mediaRendererPlaylistReady(_rendererUdn, _mediaListData)
+ - mediaRendererPlaylistReady(_rendererUdn, _mediaListData) 
+ - zoneCreated(_zoneUDN)
+ - zoneRemoved(_zoneUDN)
+ - roomAddedToZone(_zoneUDN, _roomUDN)
+ - roomRemovedFromZone((_zoneUDN, _roomUDN)
 
 
 Data & Methods
