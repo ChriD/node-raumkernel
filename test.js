@@ -3,7 +3,7 @@ var Raumkernel = require('./lib/lib.raumkernel');
 
 var raumkernel = new Raumkernel();
 
-raumkernel.settings.raumfeldHost = "10.0.0.203"
+raumkernel.settings.raumfeldHost = "0.0.0.0"
 
 raumkernel.createLogger(2);
 raumkernel.init();
