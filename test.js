@@ -5,7 +5,7 @@ var raumkernel = new Raumkernel();
 
 raumkernel.settings.raumfeldHost = "0.0.0.0"
 
-raumkernel.createLogger(2);
+raumkernel.createLogger(5);
 raumkernel.init();
 
 
