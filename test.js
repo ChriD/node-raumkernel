@@ -8,12 +8,12 @@ raumkernel.settings.raumfeldHost = "0.0.0.0"
 raumkernel.createLogger(5);
 raumkernel.init();
 
-
+/*
 raumkernel.on("zoneCreated",                          function(_zoneUDN)               { raumkernel.logWarning("Zone created: " + _zoneUDN); });
 raumkernel.on("zoneRemoved",                          function(_zoneUDN)               { raumkernel.logError("Zone removed: " + _zoneUDN); });
 raumkernel.on("roomAddedToZone",                      function(_zoneUDN, _roomUDN)     { raumkernel.logWarning("Room: " + _roomUDN + " added to zone: " + _zoneUDN); });
 raumkernel.on("roomRemovedFromZone",                  function(_zoneUDN, _roomUDN)     { raumkernel.logError("Room: " + _roomUDN + " removed from zone: " + _zoneUDN); });
-
+*/
 
 
 
@@ -39,7 +39,7 @@ raumkernel.on("systemReady", function(_ready){
             //raumkernel.logWarning("remove items from playlist");
             //raumkernel.nativePlaylistController.removeItemsFromPlaylist("RAUMKERNELTEST", 1, 1);
             
-            var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
+            //var mediaRenderer = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
 
             //var rendererUdns = mediaRenderer.getRoomRendererUDNs();
             //console.log(JSON.stringify(rendererUdns));
@@ -90,8 +90,8 @@ raumkernel.on("systemReady", function(_ready){
 
                 
 
-                var mediaRendererK = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
-                var mediaRendererB = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Bad")
+                //var mediaRendererK = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
+                //var mediaRendererB = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Bad")
                 //var rendererUdns = mediaRenderer.getRoomRendererUDNs();
                 //console.log(JSON.stringify(rendererUdns));
                 //mediaRenderer.loadLineIn("Schlafzimmer");
@@ -242,7 +242,7 @@ raumkernel.on("systemReady", function(_ready){
     });
     
 raumkernel.on("mediaListReady", function(_listId, _data){
-        raumkernel.logInfo("MediaList ready: " + _listId);
+        //raumkernel.logInfo("MediaList ready: " + _listId);
         //raumkernel.logWarning(JSON.stringify(_data));
     });
  
