@@ -118,7 +118,7 @@ mediaRenderer.setRoomVolume("uuid:3f68f253-df2a-4474-8640-fd45dd9ebf88", 35).the
  Give info when volume changes on any renderer
 ```
 raumkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn){
-		if(key=="Volume")
+		if(_key=="Volume")
 			console.log("Volume on " + _mediaRenderer.name() + " changed to " + _newValue.toString());
 	})
 ```
@@ -127,7 +127,7 @@ raumkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _ol
  The _mediaRenderer is the virtual renderer in case if _roomUdn is filled
 ```
 raumkernel.on("rendererStateKeyValueChanged", function(_mediaRenderer, _key, _oldValue, _newValue, _roomUdn){
-		if(_roomUdn && key=="Volume")
+		if(_roomUdn && _key=="Volume")
 			console.log("Volume on room: " + _roomUdn + " changed to " + _newValue.toString());
 	})
 ```
