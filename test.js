@@ -21,6 +21,8 @@ raumkernel.on("systemReady", function(_ready){
         raumkernel.logInfo("System ready: " + _ready);
         
         //
+
+               
         
         //raumkernel.logWarning("Try create playlist");
         //raumkernel.nativePlaylistController.createPlaylist("RAUMKERNELTEST").then(function(){
@@ -87,6 +89,13 @@ raumkernel.on("systemReady", function(_ready){
                     raumkernel.logWarning(_data);
                 });
                 */
+
+                var mediaRenderer = raumkernel.managerDisposer.deviceManager.getMediaRenderer("Küche")
+                mediaRenderer.leaveStandby(true).then(function(){
+                    var nice = ""    
+                }).catch(function(){
+                    var nice = ""    
+                })    
 
                 
 
