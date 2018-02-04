@@ -91,7 +91,8 @@ raumkernel.on("systemReady", function(_ready){
                 */
 
                 var mediaRenderer = raumkernel.managerDisposer.deviceManager.getMediaRenderer("Küche")
-                mediaRenderer.leaveStandby(true).then(function(){
+                var mediaRendererVirtual = raumkernel.managerDisposer.deviceManager.getVirtualMediaRenderer("Küche")
+                mediaRendererVirtual.leaveStandby(raumkernel.managerDisposer.zoneManager.getRoomUdnForMediaRendererUDN(mediaRenderer.udn()), true).then(function(){
                     var nice = ""    
                 }).catch(function(){
                     var nice = ""    
@@ -209,7 +210,7 @@ raumkernel.on("systemReady", function(_ready){
                
 
 
-            }, 3000);
+            }, 5000);
             
             
 
