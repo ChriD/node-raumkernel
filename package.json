@@ -3,7 +3,7 @@
     "node": ">=7.6.0"
   },
   "name": "node-raumkernel",
-  "version": "1.2.21",
+  "version": "1.2.22",
   "description": "Library to control the raumfeld multiroom system",
   "main": "index.js",
   "scripts": {
