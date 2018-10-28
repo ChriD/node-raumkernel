@@ -60,7 +60,8 @@ Following events are available. You may click [here](https://github.com/ChriD/no
  - zoneCreated(_zoneUDN)
  - zoneRemoved(_zoneUDN)
  - roomAddedToZone(_zoneUDN, _roomUDN)
- - roomRemovedFromZone((_zoneUDN, _roomUDN)
+ - roomRemovedFromZone(_zoneUDN, _roomUDN)
+ - combinedZoneStateChanged(_combinedStateData)
 
 
 Data & Methods
