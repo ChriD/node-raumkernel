@@ -6,6 +6,9 @@ var raumkernel = new Raumkernel();
 raumkernel.settings.raumfeldHost = "0.0.0.0"
 
 raumkernel.createLogger(5);
+raumkernel.logger.on('log', (_logData) =>{    
+    console.log(`${_logData.logType}: ${_logData.log}`);
+})
 raumkernel.init();
 
 /*
